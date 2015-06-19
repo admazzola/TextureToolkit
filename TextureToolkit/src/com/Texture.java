@@ -28,7 +28,7 @@ public class Texture {
 	public void save(String path)
 	{
 		// Check the string contains a ".", if not we cannot save the file
-		if (!banana.contains(".")) {
+		if (!path.contains(".")) {
             		System.out.println("The path given does not contain an extension");
             		return;
 		}
