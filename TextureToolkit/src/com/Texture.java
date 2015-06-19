@@ -27,8 +27,15 @@ public class Texture {
 
 	public void save(String path)
 	{
+		// Check the string contains a ".", if not we cannot save the file
+		if (!banana.contains(".")) {
+            		System.out.println("The path given does not contain an extension");
+            		return;
+		}
 		
-		String extension = path.substring(path.length() - 3 );
+		// Retrieve the last substring of 'path' after the final "."
+		String[] parts = path.split("\\.");
+		String extension = parts[parts.length - 1];
 		
 		try {
 		    // retrieve image		   
